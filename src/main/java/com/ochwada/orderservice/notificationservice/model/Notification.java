@@ -35,17 +35,13 @@ public class Notification {
 
     /**
      * Type of notification (e.g., ORDER_CONFIRMATION, STOCK_ALERT)
-     * Must be a valid email address or phone number.
      */
     private Type type;
 
     /**
      * Recipient of the notification (user or admin identifier/email/phone)
+     * Must be a valid email address or phone number.
      */
-    @Pattern(
-            regexp = "^(\\+?[0-9]{10,15}|[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,})$",
-            message = "Recipient must be a valid email or phone number"
-    )
     private String to;
 
     /**

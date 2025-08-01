@@ -31,11 +31,22 @@ POST /api/notifications
 ```
 
 Sample Request Body
-
 ```json
 {
-  "type": "ORDER_CONFIRMATION",
+  "type": "email",
   "to": "user@example.com",
   "message": "Your order #123 has been placed successfully!"
 }
+```
+
+Sample JSON Response
+```json
+{
+  "id": "64e2b02f3c7f1b6f3c93c456",
+  "type": "email",
+  "to": "user@example.com",
+  "message": "Your order #123 has been placed successfully!",
+  "sentAt": "2025-08-01T10:45:32"
+}
+
 ```
