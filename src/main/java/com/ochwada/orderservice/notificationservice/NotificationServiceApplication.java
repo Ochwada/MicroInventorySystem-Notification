@@ -1,5 +1,6 @@
 package com.ochwada.orderservice.notificationservice;
 
+import io.github.cdimascio.dotenv.Dotenv;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -10,4 +11,31 @@ public class NotificationServiceApplication {
 		SpringApplication.run(NotificationServiceApplication.class, args);
 	}
 
+
+	//========================================================================
+	// .env Configuration
+	//========================================================================
+	static {
+		// Load environment variables from .env file
+		// Ignores file if missing (useful for production environments like Heroku)
+		Dotenv dotenv = Dotenv.configure()
+				.ignoreIfMissing()
+				.load();
+
+		String[] envVar = {
+				"PORT"
+		};
+
+		for (String key : envVar){
+			String values = dotenv.get(key);
+
+			if (values != null){
+				System.setProperty(key, values); // Makes it accessible via System.getProperty
+				System.out.println("✅ " + key + " loaded and set.");
+			} else {
+				System.out.println("⚠️" + key + " not found in .env file. Skipping System.");
+			}
+		}
+	}
+	//========================================================================
 }
