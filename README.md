@@ -1,7 +1,8 @@
 # 🔔 MicroInventorySystem - Notification
 
 ---
-###  [Micro Inventory System 🍀 Overview](https://github.com/Ochwada/MicroInventorySystem-Product)
+###  [Micro Inventory System 🍀 Overview Repository ](https://github.com/Ochwada/MicroInventorySystem-Product)
+For the Microservices ⬇️
 #### [Microservice 1: Product Service](https://github.com/Ochwada/MicroInventorySystem-Product)
 #### [Microservice 2: Inventory Service](https://github.com/Ochwada/MicroInventorySystem-Inventory)
 #### [Microservice 3: Order Service](https://github.com/Ochwada/MicroInventorySystem-Order)
