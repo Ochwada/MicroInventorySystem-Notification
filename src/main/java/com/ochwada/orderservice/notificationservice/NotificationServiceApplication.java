@@ -7,35 +7,36 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class NotificationServiceApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(NotificationServiceApplication.class, args);
-	}
+    public static void main(String[] args) {
+
+        SpringApplication.run(NotificationServiceApplication.class, args);
+    }
 
 
-	//========================================================================
-	// .env Configuration
-	//========================================================================
-	static {
-		// Load environment variables from .env file
-		// Ignores file if missing (useful for production environments like Heroku)
-		Dotenv dotenv = Dotenv.configure()
-				.ignoreIfMissing()
-				.load();
+    //========================================================================
+    // .env Configuration
+    //========================================================================
+    static {
+        // Load environment variables from .env file
+        // Ignores file if missing (useful for production environments like Heroku)
+        Dotenv dotenv = Dotenv.configure()
+                .ignoreIfMissing()
+                .load();
 
-		String[] envVar = {
-				"PORT"
-		};
+        String[] envVar = {
+                "PORT"
+        };
 
-		for (String key : envVar){
-			String values = dotenv.get(key);
+        for (String key : envVar) {
+            String values = dotenv.get(key);
 
-			if (values != null){
-				System.setProperty(key, values); // Makes it accessible via System.getProperty
-				System.out.println("✅ " + key + " loaded and set.");
-			} else {
-				System.out.println("⚠️" + key + " not found in .env file. Skipping System.");
-			}
-		}
-	}
-	//========================================================================
+            if (values != null) {
+                System.setProperty(key, values); // Makes it accessible via System.getProperty
+                System.out.println("✅ " + key + " loaded and set.");
+            } else {
+                System.out.println("⚠️" + key + " not found in .env file. Skipping System.");
+            }
+        }
+    }
+    //========================================================================
 }
