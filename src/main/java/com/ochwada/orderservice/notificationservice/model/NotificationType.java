@@ -14,7 +14,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
  */
 
 
-public enum Type {
+public enum NotificationType {
     EMAIL,
     SMS;
 

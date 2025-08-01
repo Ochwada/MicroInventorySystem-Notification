@@ -1,7 +1,6 @@
 package com.ochwada.orderservice.notificationservice.model;
 
 
-import jakarta.validation.constraints.Pattern;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
@@ -36,7 +35,7 @@ public class Notification {
     /**
      * Type of notification (e.g., ORDER_CONFIRMATION, STOCK_ALERT)
      */
-    private Type type;
+    private NotificationType notificationType;
 
     /**
      * Recipient of the notification (user or admin identifier/email/phone)

@@ -24,7 +24,12 @@ public class NotificationServiceApplication {
                 .load();
 
         String[] envVar = {
-                "PORT"
+                "PORT",
+                "ORDER_SERVICE_URL",
+                "INVENTORY_SERVICE_URL",
+                "SPRING_DATA_MONGODB_URI",
+                "LOW_STOCK_EMAIL"
+
         };
 
         for (String key : envVar) {

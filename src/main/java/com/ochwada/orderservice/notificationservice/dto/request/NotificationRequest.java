@@ -1,7 +1,7 @@
 package com.ochwada.orderservice.notificationservice.dto.request;
 
 
-import com.ochwada.orderservice.notificationservice.model.Type;
+import com.ochwada.orderservice.notificationservice.model.NotificationType;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 
@@ -22,7 +22,7 @@ public record NotificationRequest(
          * The type of notification delivery.
          * Must be either EMAIL or SMS.
          */
-        @NotBlank Type type,
+        @NotBlank NotificationType type,
 
 
         /**
@@ -43,4 +43,5 @@ public record NotificationRequest(
          */
         @NotBlank String message
 ) {
+
 }

@@ -1,7 +1,7 @@
 package com.ochwada.orderservice.notificationservice.dto.response;
 
 
-import com.ochwada.orderservice.notificationservice.model.Type;
+import com.ochwada.orderservice.notificationservice.model.NotificationType;
 
 import java.time.LocalDateTime;
 
@@ -31,7 +31,7 @@ public record NotificationResponse(
         /**
          * Type of the notification (e.g., "email", "sms").
          */
-        Type type,
+        NotificationType notificationType,
 
         /**
          * Recipient of the notification.
